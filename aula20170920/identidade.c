@@ -10,14 +10,14 @@ double randd(double nmin, double nmax) {
 }
 int main()
 {
-    double o, i, pi, er;
-    er=0;
+    double o, i, pi, E;
+    E=0;
     pi=M_PI;
     o=randd(0,2*pi);
     for (i=0; i<100; i++){
-        er+=cexp(I*o)-(ccos(o)+I*csin(o));
-        printf("Rodada %.0lf -> Erro = %le\n", i+1, er);
+        E+=cexp(I*o)-(ccos(o)+I*csin(o));
+        printf("Rodada %.0lf -> Erro = %le\n", i+1, E);
     }
 
-    printf("\nErro = %le", er);
+    printf("\nErro = %le", E);
 }
